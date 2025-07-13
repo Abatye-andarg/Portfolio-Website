@@ -1,0 +1,541 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #162336;
+    color: #333;
+    transition: background 0.5s, color 0.7s;
+    width: 100vw;
+}
+
+header,
+.footer {
+    background-color: #162336;
+    transition: background 0.5s, color 0.7s;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    padding: 10px 20px;
+    color: white;
+    position: sticky;
+    top: 0;
+    z-index: 20;
+}
+
+header img {
+    width: 60px;
+    height: 60px;
+   
+    clip-path:circle(30px);
+}
+
+.space {
+    width: 70vw;
+}
+
+.container,
+.whiteContainer {
+    display: flex;
+    gap: 20px;
+    transition: background 3s;
+}
+
+.container a,
+.whiteContainer a {
+    text-decoration: none;
+    padding: 10px;
+    transition: background 0.3s;
+}
+
+.container a {
+    color: white;
+}
+
+.whiteContainer {
+    background-color: rgb(160, 153, 153);
+    color: black;
+}
+
+.whiteContainer a {
+    color: black;
+}
+
+.container a:hover {
+    background-color: #345;
+    border-radius: 1.2em;
+}
+
+.whiteContainer a:hover {
+    color: white;
+    transition: color 1.5s, background-color 1.5s;
+}
+
+.toggle {
+    width: 3.5vw;
+    height: 4.7vh;
+    border-style: none;
+    margin-left: 20px;
+    border-radius: 15px;
+    cursor: pointer;
+    display: flex;
+    justify-content: start;
+    flex-direction: row;
+    position: relative;
+}
+
+.white:hover {
+    color: black;
+    transition: color 1.5s;
+}
+
+.dark {
+    color: black;
+}
+
+.dark:hover {
+    color: white;
+    transition: color 1.5s;
+}
+
+.home {
+    background: url("Images/background.jpg") no-repeat center center/cover;
+    height: 70vh;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+}
+
+.whiteHome {
+    color: black;
+    background-image: linear-gradient(280deg, rgb(79, 199, 199), rgb(27, 130, 161),rgb(86, 194, 135), white, rgb(237, 245, 218), black);
+}
+
+.home h1.typing {
+    font-size: 2.5em;
+    text-shadow: 1px 1px 4px #000;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 3px solid white;
+    width: 0;
+    animation: typing 3s steps(30, end) forwards, blink 1s step-end infinite;
+}
+
+.line {
+    width: 15vw;
+    height: 14px;
+    background: white;
+    margin: 20px auto;
+    animation: typing 3s steps(30, end) forwards, blink 2s step-end, cool 5s linear 2s infinite alternate;
+}
+
+@keyframes cool {
+    0% {
+        width: 5vw;
+        background-color: #000;
+    }
+
+    50% {
+        width: 35vw;
+        background-color: green;
+    }
+
+    100% {
+        width: 60vw;
+        background-color: aqua;
+    }
+}
+
+@keyframes typing {
+    to {
+        width: 25vw;
+    }
+}
+
+@keyframes blink {
+    50% {
+        border-color: aqua;
+    }
+}
+
+.projects,
+.about,
+.contact {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 1s ease-out;
+}
+
+.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.projects {
+    background-color: rgb(22, 27, 27);
+    color: white;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.whiteProjects {
+  background-color:rgb(179, 171, 171);
+  background-image: linear-gradient(rgb(161, 142, 142) rgb(158, 146, 146) rgb(45, 106, 219) rgb(161, 142, 142));
+}
+
+.projects h1 {
+    margin-bottom: 30px;  
+}
+
+.projects-container,
+.proWhite-container {
+    transition: background 1s;
+}
+
+.projects-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    height: 80vh;
+}
+
+.projects-container div {
+    background-color: #004444;
+    width: 280px;
+    height: 150px;
+    padding: 20px;
+    border-radius: 10px;
+    transition: transform 0.3s;
+}
+
+.projects-container div:hover {
+    transform: scale(1.05);
+}
+
+.proWhite-container {
+    color: black;
+    padding-top: 10vh;
+    height: 60vh;
+    transition: background 3s;
+}
+
+.proWhite-container .proDiv {
+    background-color: rgb(14, 158, 224);
+    color: white;
+    height: 20vh;
+}
+
+.about {
+    background-color: bisque;
+    background-image: url(Images/background.jpg);
+    padding: 40px 20px;
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    position: relative;
+}
+.whiteAbout{
+     background-color: bisque;
+      background-image: linear-gradient(90deg, rgb(117, 113, 113), rgb(192, 181, 181), rgb(209, 219, 204));
+}
+
+.about .me img {
+    width: 50vw;
+    height: 50vh;
+    object-fit: cover;
+}
+
+.about .about-content {
+    width: 40%;
+    background-color: #004444;
+    color: white;
+    padding: 20px;
+    height: 100%;
+}
+
+section .touch {
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 50px;
+    height: 120vh;
+    width: 100vw;
+    background-color: #242731;
+    color: aqua;
+}
+     
+section .touch.whiteTouch {
+    background-color: white;
+    color: black ;
+}
+
+section.touch.whiteTouch h1,
+section.touch.whiteTouch p,
+section .touch.whiteTouch h4 {
+    color: white;
+    
+}
+
+
+.address {
+    display: block;
+    color: aqua;
+}
+
+.address div {
+    float: left;
+    margin-right: 10em;
+    background-color: black;
+    width: 20vw;
+    height: 60vh;
+    padding-top: 40px;
+    border-radius: 1.5em;
+    padding-left: 3vw;
+}
+
+.whatsApp {
+    margin-left: 5vw;
+}
+
+.address img {
+    width: 4vw;
+    height: 8vh;
+    margin-top: 2vh;
+    margin-left: 5vw;
+    object-fit: contain;
+}
+
+.separator,
+.separator_ln {
+    width: 150px;
+    height: 4px;
+    background: aqua;
+}
+
+.separator {
+    margin: 4vh 3vw;
+}
+
+.separator_ln {
+    margin-left: 3vw;
+}
+
+.address span {
+    font-size: 90px;
+    font-weight: bold;
+    color: aqua;
+    margin-left: 5vw;
+}
+
+.address a {
+    text-decoration: none;
+    color: white;
+}
+
+.address h4 {
+    width: 15vw;
+    height: 12vh;
+    padding: 13px;
+}
+
+.touch div h1 {
+    margin-top: 10vh;
+    font-size: 5em;
+    padding-left: 2.5em;
+}
+
+.touch div p {
+    font-size: 3em;
+}
+
+
+.whiteFoot{
+      background-color: rgb(160, 153, 153);
+}
+
+footer h4 {
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+.whiteFoot h4{
+    color: black;
+    font-weight:bold;
+}
+
+.back-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    padding: 10px 15px;
+    background: green;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    font-size: 18px;
+    cursor: pointer;
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .home h1 {
+        font-size: 1.8em;
+    }
+
+    .projects-container div {
+        width: 90%;
+    }
+
+    header {
+        flex-direction: row;  
+    }
+header img{
+     width: 30px;
+    height: 30px;
+    clip-path:circle(15px);
+}
+.space{
+    width:15px;
+}
+    .container, .whiteContainer {
+        flex-wrap: wrap;
+        justify-content:start;
+        gap:2px;
+        
+    }
+
+    
+    .whiteContainer a{
+        padding:8px;
+    }
+
+    @keyframes typing {
+        to {
+            width: 78%;
+        }
+    }
+
+    @keyframes blink {
+        50% {
+            border-color: transparent;
+        }
+    }
+
+    .about {
+        flex-direction: column;
+        height: auto;
+        padding: 20px;
+        gap: 20px;
+    }
+
+    .about .me img {
+        width: 50%;
+        height: auto;
+        object-fit: contain;
+        margin-left: 30vw;
+    }
+
+    .about .about-content {
+        width: 90%;
+        height: auto;
+        padding: 20px;
+        text-align: center;
+    }
+
+    .about-content h2 {
+        font-size: 24px;
+    }
+
+    .touch div h1 {
+        margin-top: 10vh;
+        font-size: 2em;
+        padding-left: 2.5em;
+    }
+
+    section .touch {
+        height: 170vh;
+        width: 100vw;
+    }
+
+    .line {
+        width: 35vw;
+        height: 14px;
+        background: white;
+        margin-left: 22vw;
+    }
+
+    .touch div p {
+        font-size: 1.2em;
+        padding-left: 7vw;
+    }
+
+    .address {
+        height: fit-content;
+        width: 100vw;
+        float: none;
+    }
+
+    .address div {
+        width: 80vw;
+        height: 40vh;
+        margin-bottom: 5vh;
+        float: none;
+        background-color: black;
+        padding-top: 0px;
+        padding-left: 0vw;
+        margin-left:10vw;
+    }
+
+    .address img {
+        width: 10vw;
+        height: 12vh;
+        margin-left: 40vw;
+    }
+
+    .separator {
+        margin-top: 0px;
+        margin-left: 30vw;
+        padding-left: 0;
+    }
+
+    .address h4 {
+        width: 70vw;
+        padding: 0px;
+        font-size: 1.5em;
+        margin-left: 15vw;
+       
+    }
+    .whatsApp h4{
+        margin-left: 10vw;
+    }
+
+    .address span {
+        margin-left: 35vw;
+    }
+
+    .separator_ln {
+        margin-left: 23vw;
+    }
+
+    footer {
+        padding-left: 12%;
+        color: white;
+        height: 10vh;
+    }
+}
