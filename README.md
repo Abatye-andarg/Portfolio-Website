@@ -26,6 +26,16 @@ It's built with modern web technologies and responsive design to ensure it looks
 - CSS3
 - JavaScript
 - GitHub for version control and deployment
+## 📸 ScreenShoots
+<img width="1066" height="563" alt="image" src="https://github.com/user-attachments/assets/847ba6ba-426f-4198-a411-c8cff2c46827" />
+
+<img width="2123" height="1069" alt="image" src="https://github.com/user-attachments/assets/bf3154f2-950f-4b11-9a3b-809cc143a580" />
+
+<img width="2135" height="1160" alt="image" src="https://github.com/user-attachments/assets/dc868bea-4988-4872-8ffe-98420c89b975" />
+
+
+
+  
 
  🙋‍♂️About Me
   
