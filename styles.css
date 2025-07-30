@@ -14,8 +14,7 @@ body {
     width: 100vw;
 }
 
-header,
-.footer {
+header {
     background-color: #162336;
     transition: background 0.5s, color 0.7s;
 }
@@ -34,8 +33,8 @@ header {
 header img {
     width: 60px;
     height: 60px;
-   
-    clip-path:circle(30px);
+
+    clip-path: circle(30px);
 }
 
 .space {
@@ -61,7 +60,7 @@ header img {
 }
 
 .whiteContainer {
-    background-color: rgb(160, 153, 153);
+    background-color: white;
     color: black;
 }
 
@@ -120,7 +119,7 @@ header img {
 
 .whiteHome {
     color: black;
-    background-image: linear-gradient(280deg, rgb(79, 199, 199), rgb(27, 130, 161),rgb(86, 194, 135), white, rgb(237, 245, 218), black);
+    background-image: linear-gradient(280deg, rgb(79, 199, 199), rgb(27, 130, 161), rgb(86, 194, 135), white, rgb(237, 245, 218), black);
 }
 
 .home h1.typing {
@@ -130,7 +129,7 @@ header img {
     overflow: hidden;
     border-right: 3px solid white;
     width: 0;
-    animation: typing 3s steps(30, end) forwards, blink 1s step-end infinite;
+    animation: typing 3s steps(10, end) forwards, blink 1s step-end infinite;
 }
 
 .line {
@@ -160,7 +159,7 @@ header img {
 
 @keyframes typing {
     to {
-        width: 25vw;
+        width: 33vw;
     }
 }
 
@@ -191,12 +190,12 @@ header img {
 }
 
 .whiteProjects {
-  background-color:rgb(179, 171, 171);
-  background-image: linear-gradient(rgb(161, 142, 142) rgb(158, 146, 146) rgb(45, 106, 219) rgb(161, 142, 142));
+    background-color: rgb(179, 171, 171);
+    background-image: linear-gradient(rgb(161, 142, 142) rgb(158, 146, 146) rgb(45, 106, 219) rgb(161, 142, 142));
 }
 
 .projects h1 {
-    margin-bottom: 30px;  
+    margin-bottom: 30px;
 }
 
 .projects-container,
@@ -238,35 +237,102 @@ header img {
     height: 20vh;
 }
 
-.about {
+.about-section {
     background-color: bisque;
     background-image: url(Images/background.jpg);
+    background-image: linear-gradient(90deg, rgb(56, 116, 66), rgb(44, 59, 70), rgb(5, 43, 54));
     padding: 40px 20px;
-    height: 60vh;
+    height: 105vh;
     display: flex;
-    align-items: center;
     justify-content: center;
     gap: 40px;
     position: relative;
 }
-.whiteAbout{
-     background-color: bisque;
-      background-image: linear-gradient(90deg, rgb(117, 113, 113), rgb(192, 181, 181), rgb(209, 219, 204));
+
+.about-section>div {
+    text-align: "left";
 }
 
-.about .me img {
-    width: 50vw;
-    height: 50vh;
-    object-fit: cover;
+.about-section.whiteAbout {
+    background-color: bisque;
+    background-image: linear-gradient(90deg, rgb(117, 113, 113), rgb(192, 181, 181), rgb(209, 219, 204));
 }
 
-.about .about-content {
-    width: 40%;
-    background-color: #004444;
+
+.me,
+.gtn {
+    display: block;
+    color: aqua;
+    text-align: center;
+    font-weight: bold;
+    font-size: 5em;
+    padding-left: 1.0em;
+    width: 40vw;
+
+}
+
+.gtn {
+    font-size: 2em;
+}
+
+.about-content {
+    background-color: #111;
     color: white;
+    font-family: 'Courier New', Courier, monospace;
     padding: 20px;
-    height: 100%;
+    border-radius: 8px;
+    border: 1px solid rgb(201, 209, 216);
+    width: 90vw;
+    max-width: 600px;
+    font-size: 16px;
+    line-height: 1.4;
+    text-align: left;
+    display: block;
+    margin: 0 auto;
 }
+
+.typed-text {
+    display: block;
+    white-space: pre-wrap;
+    margin: 0;
+    padding: 0;
+    line-height: 1.4;
+}
+
+.terminalStart,
+.terminalEnd {
+    color: rgb(41, 179, 41);
+    font-weight: bold;
+    text-align: left;
+}
+
+.terminalEnd {
+    display: none;
+}
+
+
+#terminal-line {
+    display: block;
+    white-space: pre-wrap;
+    text-align: left;
+    margin: 0px;
+}
+
+.cursor {
+    display: inline-block;
+    width: 10px;
+    animation: blunk 1s step-start infinite;
+    font-weight: bold;
+}
+
+@keyframes blunk {
+    50% {
+        opacity: 0;
+    }
+}
+
+
+
 
 section .touch {
     display: flex;
@@ -279,17 +345,17 @@ section .touch {
     background-color: #242731;
     color: aqua;
 }
-     
+
 section .touch.whiteTouch {
-    background-color: white;
-    color: black ;
+    background-image: linear-gradient(90deg, rgb(127, 226, 127), rgb(108, 192, 231), rgb(108, 192, 231), rgb(78, 233, 78), rgb(25, 161, 214));
+    color: black;
 }
 
 section.touch.whiteTouch h1,
 section.touch.whiteTouch p,
 section .touch.whiteTouch h4 {
-    color: white;
-    
+    color: rgb(7, 0, 0);
+
 }
 
 
@@ -307,6 +373,10 @@ section .touch.whiteTouch h4 {
     padding-top: 40px;
     border-radius: 1.5em;
     padding-left: 3vw;
+}
+
+.touch.whiteTouch .address div {
+    background-color: rgb(255, 255, 255);
 }
 
 .whatsApp {
@@ -364,19 +434,26 @@ section .touch.whiteTouch h4 {
     font-size: 3em;
 }
 
-
-.whiteFoot{
-      background-color: rgb(160, 153, 153);
+.foot {
+    background-color: #1259c4;
+    transition: background 0.5s, color 0.7s;
 }
 
-footer h4 {
+.foot.whiteFoot {
+    background-color: white;
+    transition: background 0.5s, color 0.7s;
+}
+
+.foot h4 {
     color: white;
     padding: 20px;
     text-align: center;
 }
-.whiteFoot h4{
+
+.foot.whiteFoot h4 {
     color: black;
-    font-weight:bold;
+    font-weight: bold;
+    background-color: white;
 }
 
 .back-to-top {
@@ -403,26 +480,30 @@ footer h4 {
     }
 
     header {
-        flex-direction: row;  
-    }
-header img{
-     width: 30px;
-    height: 30px;
-    clip-path:circle(15px);
-}
-.space{
-    width:15px;
-}
-    .container, .whiteContainer {
-        flex-wrap: wrap;
-        justify-content:start;
-        gap:2px;
-        
+        flex-direction: row;
     }
 
-    
-    .whiteContainer a{
-        padding:8px;
+    header img {
+        width: 30px;
+        height: 30px;
+        clip-path: circle(15px);
+    }
+
+    .space {
+        width: 15px;
+    }
+
+    .container,
+    .whiteContainer {
+        flex-wrap: wrap;
+        justify-content: start;
+        gap: 2px;
+
+    }
+
+
+    .whiteContainer a {
+        padding: 8px;
     }
 
     @keyframes typing {
@@ -437,25 +518,43 @@ header img{
         }
     }
 
-    .about {
+    .about-section {
         flex-direction: column;
         height: auto;
         padding: 20px;
         gap: 20px;
     }
 
-    .about .me img {
-        width: 50%;
+    .about-content {
+        width: fit-content;
         height: auto;
-        object-fit: contain;
-        margin-left: 30vw;
+
+        background-color: #111;
+        color: white;
+        font-family: 'Courier New', Courier, monospace;
+        padding: 20px;
+        border-radius: 8px;
+        border-color: rgb(201, 209, 216);
+        border-width: 1px;
+        border-style: solid;
+
+        font-size: 10px;
+        height: 70vh;
     }
 
-    .about .about-content {
-        width: 90%;
-        height: auto;
-        padding: 20px;
-        text-align: center;
+    .me,
+    .gtn {
+        display: block;
+        color: aqua;
+        font-weight: bold;
+        font-size: 1.5em;
+        padding-left: 4.0em;
+        width: fit-content;
+
+    }
+
+    .gtn {
+        font-size: 0.9em;
     }
 
     .about-content h2 {
@@ -499,7 +598,7 @@ header img{
         background-color: black;
         padding-top: 0px;
         padding-left: 0vw;
-        margin-left:10vw;
+        margin-left: 10vw;
     }
 
     .address img {
@@ -519,9 +618,10 @@ header img{
         padding: 0px;
         font-size: 1.5em;
         margin-left: 15vw;
-       
+
     }
-    .whatsApp h4{
+
+    .whatsApp h4 {
         margin-left: 10vw;
     }
 
@@ -533,7 +633,7 @@ header img{
         margin-left: 23vw;
     }
 
-    footer {
+     .foot {
         padding-left: 12%;
         color: white;
         height: 10vh;
